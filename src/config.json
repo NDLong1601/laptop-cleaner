@@ -1,0 +1,10 @@
+{
+    "auto_clean_on_startup": false,
+    "low_disk_alert": true,
+    "low_disk_threshold_pct": 20,
+    "schedule_frequency": "weekly",
+    "clean_temp": true,
+    "clean_logs": true,
+    "clean_browser": false,
+    "clean_recycle_bin": false
+}
