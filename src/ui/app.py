@@ -1,3 +1,5 @@
+import os
+import sys
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWidgets import QApplication
@@ -25,6 +27,15 @@ class LaptopCleanerApp(FluentWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Laptop Cleaner & Optimizer - Windows 11 Fluent")
+
+        # Set window icon from assets
+        icon_path = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "assets", "icon.png"))
+        if not os.path.exists(icon_path):
+            base_dir = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+            icon_path = os.path.join(base_dir, "assets", "icon.png")
+        if os.path.exists(icon_path):
+            self.setWindowIcon(QIcon(icon_path))
+
         self.resize(1120, 750)
         self.setMinimumSize(920, 620)
 

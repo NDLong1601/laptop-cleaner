@@ -17,6 +17,7 @@ a = Analysis(
     binaries=[],
     datas=[
         ('src/config.json', '.'),
+        ('assets', 'assets'),
     ],
     hiddenimports=[
         # PyQt6
